@@ -3,27 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using 
+using ListagemDeCarros.Controller;
 namespace Listar
 {
     class Program
     {
+        static CarroController Controller = new CarroController();
         static void Main(string[] args)
         {
-            {
-                static CarrosController Controller = new CarrosController();
+            Controller.GetCarros()
+                .ForEach(i => Console.WriteLine($"{i.Id} {i.Marca} {i.Modelo}"));
 
-                static void Main(string[] args)
-                {
-                    Controller.GetCarros()
-                        .ForEach(i => Console.WriteLine($"{i.Id} {i.Marca} {i.Modelo}"));
-
-                    Console.ReadLine();
-                }
-
-
-
-            }
+            Console.ReadLine();
         }
     }
 }

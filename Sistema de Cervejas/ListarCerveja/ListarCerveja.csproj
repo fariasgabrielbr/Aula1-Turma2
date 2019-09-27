@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B07410A-BD71-4D91-BB18-F74303540AAD}</ProjectGuid>
+    <ProjectGuid>{337075CA-80AB-4A23-A0EB-959ADCD584C3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Listar</RootNamespace>
-    <AssemblyName>Listar</AssemblyName>
+    <RootNamespace>ListarCerveja</RootNamespace>
+    <AssemblyName>ListarCerveja</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ListagemDeCarros">
-      <HintPath>\\svprwy001\alunos\hbsis\DllsComComentarios\0\ListagemDeCarros.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListagemDeCervejas\ListagemDeCervejas.csproj">
+      <Project>{358d6c98-3761-40d8-a2be-1ad75f162d9d}</Project>
+      <Name>ListagemDeCervejas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
